@@ -1,0 +1,17 @@
+<div class='container'>
+  <div class='box'>
+      <h1>Restaurants</h1>
+  <ul class = 'list'>
+    <%@restaurants.each do |restaurant|%>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant)%>
+        <%= restaurant.address%>
+        <%= restaurant.phone_number%>
+        <%= restaurant.category%>
+      </li>
+    <%end%>
+  </ul>
+  <div class='button'>
+      <%= link_to "Add new restaurant", new_restaurant_path, class: "buttontxt" %>
+  </div>
+  </div>
+</div>
